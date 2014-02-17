@@ -1,0 +1,12 @@
+﻿@model MvcApplication1.Controllers.PeopleViewModel    
+
+@foreach (var person in Model.Persons)
+{
+    <h3>@person.FirstName</h3>
+    <ul>
+        @foreach (var order in person.Orders)
+        {
+            <li>@order.ProductName</li>
+        }
+    </ul>
+}
